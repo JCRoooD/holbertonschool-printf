@@ -1,0 +1,43 @@
+.\" Manpage for _printf.
+.\"
+.TH _printf 3 "28 July 2023" "1.0" "_printf man page"
+
+.SH NAME
+.B _printf
+\- produces output according to the format.
+
+.SH SYNOPSIS
+.B #include "main.h"
+
+.B int _printf(const char *format, ...);
+
+.SH DESCRIPTION
+In C programming, the purpose of the printf function is to print formatted text to the standard output stream. It can take one or more arguments, where the first argument is a string to be written. This string can containe special formatting codes which are replaced by items from the remainder of the arguments.
+
+.SH CONVERSION SPECIFIERS
+.BI %c
+\- used to print characters
+
+.BI %s
+\- used to print a string
+
+.BI %%
+\- used to print the % symbol
+
+.BI %d
+\- used to print a decimal integer (assumes base 10)
+
+.BI %i
+\- used to print a decimal integer (detects the base automatically)
+
+.SH RETURN
+The number of characters printed (excluding the null byte used to end output to strings)
+
+.SH COMPILATION
+.B $ gcc -Wall -Werror -Wextra -pedantic -std=gnu89 -Wno-format *.c
+
+.SH BUGS
+No known bugs
+
+.SH AUTHORS
+Written by Jean Jiménez (jean.jimenez@holbertonstudents.com) and Juan Rodriguez (juan.rodriguez@holbertonstudents.com)
