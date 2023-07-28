@@ -10,24 +10,24 @@ int _printf(const char *format, ...)
 	int i, j;
 	int times = 0;
 	va_list list;
-	program prg[] = {
-		{'c', print_c}
-		{'s', print_s}
-		{'i', print_int}
-		{'d', print_int}
-		{'%', print_mod}
+	pgrm prg[] = {
+		{'c', print_c},
+		{'s', print_s},
+		{'d', print_int},
+		{'i', print_int},
+		{'%', print_mod},
 		{'\0', NULL}
 	};
 
 	va_start(list, format);
 
 	for (i = 0; format[i]; i++)
-		if (format[i] == '%')	
+		if (format[i] == '%')
 		{
 			i++;
 			for (; format[i] != '\0'; i++)
 			{
-				for (j = 0; prg[j] != '\0'; j++)
+				for (j = 0; prg[j].argu != '\0'; j++)
 					if (format[i] == prg[j].argu)
 					{
 						times += prg[j].f(list);
@@ -36,7 +36,7 @@ int _printf(const char *format, ...)
 				if (prg[j].argu)
 					break;
 			}
-			if (format[i] != '\0')
+			if (format[i] == '\0')
 				return (-1);
 		}
 		else

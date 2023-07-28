@@ -6,16 +6,16 @@
 #include <stdlib.h>
 
 /**
- *pgrm - program to print
+ *program - program to print
  *@argu: character that will show the argument
  *@f: function that will run if argu matches
  */
-typedef struct pgrm
+typedef struct program
 {
-char *argu;
+char argu;
 int (*f)(va_list);
 }
-program;
+pgrm;
 
 /**
  *_printf - will mimic printf original function
@@ -24,6 +24,8 @@ program;
  */
 /* function declaration */
 int _printf(const char *format, ...);
-int print_c(char c);
-int print_s(char *s);
+int print_c(va_list page);
+int print_s(va_list page);
+int print_mod(va_list page);
+int print_int(va_list page);
 #endif
