@@ -3,7 +3,7 @@
 ## Table of Content
 :computer: _printf.c: This is the main code, of our custom function, it's a replica of the printf function.
 
-:computer: function_declaration.c: Contains all the functions that are call in our _printf.c file.
+:computer: print_functions.c: Contains all the functions that are call in our _printf.c file.
 
 :computer: main.h: It's the header file, contains the prototype to our functions.
 
