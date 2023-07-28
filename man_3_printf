@@ -8,11 +8,12 @@
 
 .SH SYNOPSIS
 .B #include "main.h"
+.B #include <stdio.h>
 
 .B int _printf(const char *format, ...);
 
 .SH DESCRIPTION
-In C programming, the purpose of the printf function is to print formatted text to the standard output stream. It can take one or more arguments, where the first argument is a string to be written. This string can containe special formatting codes which are replaced by items from the remainder of the arguments.
+In C programming, the purpose of the printf function is to print formatted text to the standard output stream. It can take one or more arguments, where the first argument is a string to be written. This string can contain special formatting codes which are replaced by items from the remainder of the arguments.
 
 .SH CONVERSION SPECIFIERS
 .BI %c
