@@ -39,7 +39,7 @@ int print_s(va_list page)
  *print_mod -prints percentage char
  *@page: page containing list of args, va list
  *Return: number of characters to be printed
- */	
+ */
 int print_mod(va_list page)
 {
 	char x = '%';
@@ -57,7 +57,7 @@ int print_mod(va_list page)
  */
 int print_int(va_list page)
 {
-	int numero= va_arg(page, int);
+	int numero = va_arg(page, int);
 	int count = 0;
 	int characters = 0;
 	char buffer[12];

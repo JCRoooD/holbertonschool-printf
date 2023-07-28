@@ -6,7 +6,7 @@
 #include <stdlib.h>
 
 /**
- *program - program to print
+ *struct program - program to print
  *@argu: character that will show the argument
  *@f: function that will run if argu matches
  */
