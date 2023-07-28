@@ -57,15 +57,33 @@ int print_mod(va_list page)
  */
 int print_int(va_list page)
 {
-	int numero = va_arg(page, int);
-	int count = 0;
-	int characters = 0;
-	char buffer[12];
-	int largo = sprintf(buffer, "%d", numero);
 
-	if (largo > 0)
+	int number = va_arg(page, int);
+	unsigned int absolute_value;
+	char digit;
+	int exponent = 1;
+	int length = 0;
+
+	if (number < 0)
 	{
-		characters += write(1, buffer, largo);
+		digit = '-';
+		length = length + write(1, &digit, 1);
+		absolute_value = number * -1;
 	}
-	return (count);
+	else
+		absolute_value = number;
+
+	while (absolute_value / exponent > 9)
+	{
+		exponent *= 10;
+	}
+
+	while (exponent != 0)
+	{
+		digit = absolute_value / exponent + '0';
+		length = length + write(1, &digit, 1);
+		absolute_value = absolute_value % exponent;
+		exponent = exponent / 10;
+	}
+	return (length);
 }
