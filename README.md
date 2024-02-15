@@ -54,4 +54,5 @@ Solving these challenges helped us to develop critical thinking and emphasize co
 This function work similar to ![printf(3)](https://man7.org/linux/man-pages/man3/printf.3.html). 
 
 ## Developers
-### Juan Rodriguez / Jean Jimenez
+### Juan Rodriguez [Linkedin](https://www.linkedin.com/in/juan-carlos-rodriguez-ocasio-4215661b1/) / [Github](https://github.com/JCRoooD)
+### Jean Jimenez
